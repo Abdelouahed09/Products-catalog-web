@@ -211,7 +211,17 @@ products-catalog-web/
 ├── vite.config.ts       # Vite configuration
 ├── tsconfig.json        # TypeScript configuration
 └── tailwind.config.js   # Tailwind CSS configuration
+
 ```
+
+## 📝 Notes on Design Decisions
+
+- **Reasonable defaults over configuration**: Chosen Chakra UI and Vite for fast iteration, with React Query handling server state to avoid bespoke data caches.
+- **Explicit colors via hex codes**: Even though Chakra is used, hex values ensure consistency across devices where utility class colors may vary.
+- **Local-first UX**: Favorites are stored in `localStorage` for instant feedback and persistence without backend complexity.
+- **Separation of concerns**: `services/` encapsulates API logic, `types/` centralizes models, and UI components remain presentational.
+- **Performance-first rendering**: Pagination and debounced interactions minimize unnecessary DOM and network work.
+
 
 ## 🔮 Future Enhancements
 
